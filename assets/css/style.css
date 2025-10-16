@@ -1,0 +1,252 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap');
+:root {
+  --cor-primaria: #1a1a1a;
+  --cor-secundaria: #fafafa;
+  --cor-accento: #c5a880;
+  --cor-texto: #333333;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: var(--cor-secundaria);
+  color: var(--cor-texto);
+  line-height: 1.6;
+  padding: 40px;
+  font-weight: 300;
+}
+h1, h2, h3, h4 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  color: var(--cor-primaria);
+  margin-bottom: 24px;
+}
+h1 {
+  text-align: center;
+}
+h2 {
+  text-align: center;
+}
+h3 {
+  text-align: center;
+}
+a {
+  color: var(--cor-primaria);
+  text-decoration: none;
+  font-weight: 600;
+  cursor: pointer;
+  text-align: center;
+}
+a:hover {
+  text-decoration: underline;
+}
+header, nav, footer {
+  background-color: var(--cor-secundaria);
+  padding: 1.5rem 0;
+  border-bottom: 1px solid #ddd;
+}
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+}
+nav a {
+  text-align: center;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.95rem;
+  letter-spacing: 1.2px;
+}
+main {
+  max-width: 960px;
+  margin: 0 auto;
+  background-color: var(--cor-secundaria);
+  padding: 20px 40px;
+}
+section#sobre-ceo {
+  margin-top: 60px;
+}
+.card {
+  color: #ffffff;
+  text-align: center;
+}
+.card h1, .card h2 {
+  color: #ffffff;
+}
+.artistas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: space-between;
+  margin-top: 40px;
+}
+.artista {
+  flex: 1 1 calc(50% - 20px);
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.foto-artista, .foto-ceo {
+  width: 280px;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 8px 12px rgba(0,0,0,0.12);
+  margin-bottom: 20px;
+  transition: transform 0.3s ease;
+}
+.foto-artista:hover, .foto-ceo:hover {
+  transform: scale(1.05);
+}
+blockquote {
+  font-family: 'Merriweather', serif;
+  font-style: italic;
+  color: var(--cor-primaria);
+  font-weight: 400;
+  margin-top: 12px;
+  line-height: 1.5;
+}
+footer {
+  margin-top: 80px;
+  padding: 30px 0;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #888;
+  border-top: 1px solid #ddd;
+}
+@media (max-width: 1024px) {
+  main, .artista-card, .galeria-card, table {
+    max-width: 100%;
+    width: 90vw;
+    padding: 8px;
+  }
+  .artista-card img, .galeria-card img, .foto-artista, .foto-ceo {
+    max-width: 100%;
+    height: auto;
+    min-height: 80px;
+  }
+  .artistas-cards {
+    gap: 20px;
+  }
+}
+@media (max-width: 768px) {
+  body, main, header, nav, footer {
+    padding: 8px;
+  }
+  nav {
+    flex-direction: column;
+    gap: 10px;
+    font-size: 0.95rem;
+  }
+  .artistas-cards {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+}
+@media (max-width: 480px) {
+  h1, h2, h3, h4 {
+    font-size: 1rem;
+    margin-bottom: 10px;
+  }
+  .artista-card, .galeria-card, table {
+    padding: 4px;
+    font-size: 0.9rem;
+  }
+}
+.imgbutton {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 200px;
+  height: 150px;
+  border-radius: 50%
+}
+.cardTitulo {
+ width: 100%;
+ padding: 20px 0;
+ background-color: #000000;
+ color: #ffffff;
+}
+.button {
+  background:    #ffffff;
+border:        1px solid #556699;
+border-radius: 11px;
+box-shadow:    0 1px #444444;
+width:         200px;
+height:        50px;
+color:         #000000;
+display:       inline-block;
+font:          normal bold 21px/50px "Ubuntu", sans-serif;
+text-align:    center;
+}
+.artistas-cards {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 24px;
+}
+.artista-card {
+  background: var(--cor-secundaria);
+  border-radius: 16px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.10);
+  width: 240px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 24px 16px 32px 16px;
+}
+.artista-card img {
+  width: 160px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 16px;
+}
+.artista-card h3 {
+  margin-bottom: 16px;
+  color: var(--cor-primaria);
+  font-size: 1.2rem;
+}
+.espaco-vazio {
+  width: 100%;
+  height: 40px;
+  background: transparent;
+  border-radius: 8px;
+  margin-top: 8px;
+}
+#destaques h1 {
+  text-align: center;
+}
+
+.contato-centralizado main, .contato-centralizado h1, .contato-centralizado h2, .contato-centralizado ul, .contato-centralizado p, .contato-centralizado iframe {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+.contato-centralizado ul {
+  list-style-position: inside;
+}
+table {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+#sobre-nos h1 {
+  text-align: center;
+}
+#sobre-ceo img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
